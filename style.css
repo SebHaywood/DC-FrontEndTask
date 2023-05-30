@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Circular';
+    src: url('assets/fonts/circular-std-medium-500.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+body {
+    font-family: 'Circular';
+}
+
+footer {
+    background: #000;
+}
