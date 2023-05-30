@@ -54,7 +54,7 @@ header .phone img {
 .main {
     background: url("assets/images/bg-mist.png");
     background-size: cover;
-    padding: 90px 0 55px;
+    padding: 90px 0 0;
 }
 
 .main .search p.content {
@@ -70,6 +70,7 @@ header .phone img {
     margin: auto;
     max-width: 800px;
     margin-top: 64px;
+    margin-bottom: 55px;
     background: #FFF;
     border-radius: 4px;
     padding: 14px 18px;
@@ -97,13 +98,22 @@ header .phone img {
 }
 
 /* SEARCH RESULTS CONTENT */
-.main .section .display {}
+.main .section.display {
+    background: #F4F4F4;
+    min-height: 23vh;
+}
 
 
 /* FOOTER */
 footer {
-    height: 260px;
+    padding: 75px 0 122px;
+    max-height: 260px;
     background: #000;
+    color: #FFF;
+}
+
+footer a {
+    margin-right: 25px;
 }
 
 /* CONTAINER RULES */
@@ -111,6 +121,14 @@ footer {
     max-width: 1216px;
     margin: auto;
     display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.half {
+    width: 50%;
 }
 
 /* FONTS */
