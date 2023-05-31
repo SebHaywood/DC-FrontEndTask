@@ -17,6 +17,7 @@ async function fetchCountry() {
       const data = await res.json();
 
       if (res.ok) {
+        toggleError(false);
 
         // PULL DATA POINTS
         const name = data[0].name.common;
@@ -65,11 +66,30 @@ async function fetchCountry() {
 
 
       } else {
+        toggleError(true);
       }
     } catch (error) {
+      toggleError(true);
     }
   } else {
     console.log('Please enter a country name');
+  }
+}
+
+async function toggleError(status){
+  const outputMain = document.getElementById("output");
+  const outputError = document.getElementById("output-error");
+
+  if (status){
+    outputMain.style.opacity = "0";
+    outputError.style.opacity = "1";
+    outputMain.style.height = "0";
+    outputError.style.height = "fit-content";
+  } else {
+    outputMain.style.opacity = "1";
+    outputError.style.opacity = "0";
+    outputMain.style.height = "fit-content";
+    outputError.style.height = "0";
   }
 }
 
