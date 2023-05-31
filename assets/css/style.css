@@ -1,0 +1,276 @@
+body {
+    font-family: 'Circular';
+    margin: 0;
+}
+
+header {
+    height: 115px;
+}
+
+/* HEADER */
+header .heading {
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 31px 0;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 21px;
+    text-align: center;
+    width: inherit;
+}
+
+header .logo {
+    margin-top: 15px;
+    width: 186px;
+    height: fit-content;
+}
+
+header .phone {
+    cursor: pointer;
+    width: 186px;
+    display: flex;
+    font-size: 15px;
+}
+
+header .phone a {
+    height: fit-content;
+    margin-top: 16px;
+    color: #858585;
+    width: max-content;
+    text-decoration: none;
+}
+
+header .phone img {
+    margin: 10px 5px;
+    padding: 7px;
+    border: 1px solid #2BACE333;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+}
+
+/* MAIN BODY */
+.main {
+    background: url("../images/bg-mist.png");
+    background-size: cover;
+    padding: 90px 0 0;
+}
+
+.main, footer {
+    opacity: 0;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+
+.main .search p.content {
+    margin: auto;
+    max-width: 520px;
+    color: #FFF;
+    font-size: 19px;
+    text-align: center;
+} 
+
+/* SEARCH BAR */
+.main .search .search-bar {
+    margin: auto;
+    max-width: 800px;
+    margin-top: 64px;
+    margin-bottom: 55px;
+    background: #FFF;
+    padding: 14px 18px;
+}
+
+.main .search .search-bar input {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    max-width: 738px;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    top: -4px;
+    left: 8px;
+    position: relative;
+}
+
+.main .search .search-bar .search {
+    cursor: pointer;
+}
+
+.main .search .search-bar .close {
+    cursor: pointer;
+    top: 4px;
+    position: relative;
+    opacity: 0.5;
+    -webkit-transition: opacity 500ms ease;
+    -moz-transition: opacity 500ms ease;
+    -ms-transition: opacity 500ms ease;
+    -o-transition: opacity 500ms ease;
+    transition: opacity 500ms ease;
+}
+
+.main .search .search-bar .close:hover{
+    opacity: 1;
+}
+
+/* SEARCH RESULTS CONTENT */
+.main .section.display {
+    background: #F4F4F4;
+    min-height: 380px;
+}
+
+.main .section.display .info {
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.main .section.display .info .quater {
+    overflow: hidden;
+    position: relative;
+}
+
+.main .section.display .info .flag{
+    width: fit-content;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.main .section.display .container {
+    opacity: 0;
+    -webkit-transition: opacity 500ms ease;
+    -moz-transition: opacity 500ms ease;
+    -ms-transition: opacity 500ms ease;
+    -o-transition: opacity 500ms ease;
+    transition: opacity 500ms ease;
+}
+
+.main .section.display h1 {
+    font-size: 37px;
+    text-align: center;
+    width: 100%;
+    padding-top: 40px;
+}
+
+.main .section.display .info #info {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.main .section.display .info #info div {
+    display: flex;
+    width: max-content;
+    font-size: 16px;
+}
+
+.main .section.display .info #info div p:nth-child(2) {
+    margin-left: 5px;
+}
+
+.main .section.display #output {
+    height: 0;
+}
+
+/* ERROR MESSAGE */
+.main .section.display #output-error {
+    opacity: 0;
+    margin-top: 100px;
+    padding-bottom: 140px;
+    -webkit-transition: opacity 500ms ease;
+    -moz-transition: opacity 500ms ease;
+    -ms-transition: opacity 500ms ease;
+    -o-transition: opacity 500ms ease;
+    transition: opacity 500ms ease;
+    height: 0;
+}
+
+.main .section.display #output-error img, 
+.main .section.display #output-error .error-heading,
+.main .section.display #output-error .error-message {
+    display: block;
+    margin: auto;
+}
+
+.main .section.display #output-error .error-heading {
+    max-width: 342px;
+    font-size: 21px;
+}
+
+.main .section.display #output-error .error-message {
+    font-size: 16px;
+    color: #B3B3B3;
+    width: fit-content;
+    margin-top: 16px;
+}
+
+
+/* FOOTER */
+footer {
+    padding: 75px 0 122px;
+    max-height: 260px;
+    background: #000;
+    color: #FFF;
+}
+
+footer a {
+    margin-right: 25px;
+}
+
+/* CONTAINER RULES */
+.container {
+    max-width: 1216px;
+    margin: auto;
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.half {
+    width: 50%;
+}
+
+.quater {
+    width: 25%;
+}
+
+.threequater {
+    width: 75%;
+}
+
+.rounded {
+    border-radius: 4px;
+}
+
+.shadow {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bg-white {
+    background: #FFF;
+}
+
+/* FONTS */
+@font-face {
+    font-family: 'Circular';
+    src: url('../fonts/circular-std-medium-500.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+.font-medium {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
