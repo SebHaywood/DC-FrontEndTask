@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>DC - Front End Task - SH</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+  <body>
+    <header class="container">
+      <div class="heading">
+        <img src="assets/images/DC-logo-dark.png" class="logo" alt="">
+        <h1 class="font-medium">Countries search development test</h1>
+        <div class="phone">
+          <img src="assets/images/phone.png" alt="">
+          <a target="_blank" rel="noopener noreferrer" href="tel:+44 (0) 20 7375 6360" class="font-medium">+44 (0) 20 7375 6360</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="main" id="main">
+      <div class="container section search">
+        <p class="font-medium content">
+          Nunc vulputate libero et velit interdum ac aliquet odio mattis class aptent taciti sociosqu ad litora
+          torquent conubia nostra
+        </p>
+        <div class="search-bar rounded">
+          <img class="search" id="search-api-btn" src="assets/images/search.png" alt="">
+          <input type="text" id="search-api">
+          <img class="close" src="assets/images/close.png" alt="">
+        </div>
+      </div>
+      <div class="section display">
+        <div class="container" id="output">
+          <h1 id="display-countryName">null</h1>
+          <div class="flex info">
+            <div class="quater bg-white rounded shadow">
+              <img class="flag rounded" src="" id="display-flag" alt="">
+            </div>
+            <div class="threequater bg-white rounded shadow" id="info">
+              <div id="display-capital">
+                <p class="font-bold">Capital:</p>
+                <p class="font-medium">null</p>
+              </div>
+              <div id="display-continents">
+                <p class="font-bold">Continents:</p>
+                <p class="font-medium">null</p>
+              </div>
+              <div id="display-currencies">
+                <p class="font-bold">Currencies:</p>
+                <p class="font-medium">null</p>
+              </div>
+              <div id="display-languages">
+                <p class="font-bold">Language(s):</p>
+                <p class="font-medium">null</p>
+              </div>
+              <div id="display-population">
+                <p class="font-bold">Population:</p>
+                <p class="font-medium">null</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="output-error">
+          <img src="assets/images/search-empty-icon.svg" alt="">
+          <h1 class="error-heading">Sorry we couldn't find any matches for Iceland</h1>
+          <p class="error-message">Please try searching with another term</p>
+        </div>
+      </div>
+
+    </div>
+
+    <footer id="footer">
+      <div class="container flex">
+        <div class="half">
+          <img src="assets/images/DC-logo-light.png" class="logo" alt="">
+        </div>
+        <div class="half flex">
+          <div class="half">
+            <p>Contact us</p>
+            <p>62 Britton Street</p>
+            <p>London EC1M 5UY</p>
+          </div>
+
+          <div class="half">
+            <p>Follow us</p>
+            <div class="flex">
+              <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/designcultureuk"><img src="assets/images/twitter.png" alt=""></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/designcultureuk"><img src="assets/images/linkedin.png" alt=""></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/designcultureuk/"><img src="assets/images/instagram.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
