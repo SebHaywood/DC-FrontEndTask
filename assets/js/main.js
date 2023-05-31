@@ -1,7 +1,8 @@
-// GET TEXT INPUT
+// GET MAIN AND FOOTER ELEMENTS FOR FADE IN ON LOAD
 document.getElementById('main').style.opacity = "1";
 document.getElementById('footer').style.opacity = "1"; 
 
+// GET TEXT INPUT
 const inputBox = document.getElementById('search-api');
 var allLanguages;
 
@@ -11,12 +12,14 @@ async function fetchCountry() {
   const output = document.getElementById("output");
   output.style.opacity = "0";
 
+  // IF COUNTRYNAME IS NOT EMPTY REQUEST FETCH
   if (countryName !== '') {
     try {
       const res = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
       const data = await res.json();
 
       if (res.ok) {
+        // CLEAR ERROR SCREEN
         toggleError(false);
 
         // PULL DATA POINTS
@@ -28,7 +31,7 @@ async function fetchCountry() {
         const population = data[0].population;
         const flag = data[0].flags;
         
-        // HANDLE CURRECY OBJECT TO GET CURRENCY NAME
+        // HANDLE CURRECY OBJECT TO GET CURRENCY NAME - THIS WAS ABIT FIDDLY BECAUSE TOOK ME A SECOND TO WORK OUT THE OBJECT SCTRUCTURE
         var allCurrencies = Object.values(currencies);
         allCurrencies = Object.values(allCurrencies[0])[0];
 
@@ -61,10 +64,9 @@ async function fetchCountry() {
         currenciesElement.lastElementChild.textContent = allCurrencies;
         languagesElement.lastElementChild.textContent = allLanguages;
         populationElement.lastElementChild.textContent = formatPopulation;
-
+        
+        // FADE IN OUTPUT
         output.style.opacity = "1";
-
-
       } else {
         toggleError(true);
       }
@@ -72,10 +74,11 @@ async function fetchCountry() {
       toggleError(true);
     }
   } else {
-    console.log('Please enter a country name');
+    console.log('Please enter a valid input.');
   }
 }
 
+// TOGGLE ERROR FUNCTION - THIS FUNCTION SIMPLY SWAPS BETWEEN THE DATA OUTPUT AND THE ERROR OUTPUT USING OPACITY AND HEIGHT.
 async function toggleError(status){
   const outputMain = document.getElementById("output");
   const outputError = document.getElementById("output-error");
@@ -93,7 +96,7 @@ async function toggleError(status){
   }
 }
 
-// Event listener for the search button
+// EVENT LISTENERS - SEARCH BAR CLICK - SEARCH BUTTON CLICK - ENTER KEY PRESSED
 document.getElementById('search-api').addEventListener('click', fetchCountry);
 document.getElementById('search-api-btn').addEventListener('click', fetchCountry);
 document.getElementById('search-api').addEventListener('keypress', function (e) {
