@@ -56,6 +56,8 @@ header .phone img {
     background: url("../images/bg-mist.png");
     background-size: cover;
     padding: 90px 0 0;
+    background-repeat: repeat-x;
+    animation: bgSlide 30s infinite;
 }
 
 .main, footer {
@@ -83,6 +85,16 @@ header .phone img {
     margin-bottom: 55px;
     background: #FFF;
     padding: 14px 18px;
+    box-shadow: 0px 5px 10px -10px #000;
+    -webkit-transition: box-shadow 1s ease;
+    -moz-transition: box-shadow 1s ease;
+    -ms-transition: box-shadow 1s ease;
+    -o-transition: box-shadow 1s ease;
+    transition: box-shadow 1s ease;
+}
+
+.main .search .search-bar:hover {
+    box-shadow: 0px 15px 10px -10px #000;
 }
 
 .main .search .search-bar input {
@@ -122,6 +134,8 @@ header .phone img {
 .main .section.display {
     background: #F4F4F4;
     min-height: 380px;
+    transform: translateY(1px);
+    height: 100%;
 }
 
 .main .section.display .info {
@@ -182,6 +196,7 @@ header .phone img {
 
 /* ERROR MESSAGE */
 .main .section.display #output-error {
+    display: none;
     opacity: 0;
     margin-top: 100px;
     padding-bottom: 140px;
@@ -212,6 +227,21 @@ header .phone img {
     margin-top: 16px;
 }
 
+.info .quater, .info .threequater {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(0px);
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease; 
+
+}
+
+.info .quater:hover, .info .threequater:hover {
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
 
 /* FOOTER */
 footer {
@@ -219,10 +249,20 @@ footer {
     max-height: 260px;
     background: #000;
     color: #FFF;
+    position: absolute;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    bottom: -1px;
 }
 
 footer a {
     margin-right: 25px;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
 }
 
 /* CONTAINER RULES */
@@ -379,3 +419,17 @@ footer a {
         margin: 0 15px;
     }
 }
+
+/* BACKGROUND ANIMATION */
+
+@keyframes bgSlide {
+    0% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 300% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+  }

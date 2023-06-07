@@ -17,3 +17,11 @@ To view the repo for this task, please visit: https://github.com/SebHaywood/DC-F
 Feel free to contact me if there's anything I've overlooked.
 
 Thanks again for the opportunity!
+
+07/06/2023
+- Added clear search button functionality
+- Absolute bottom positioning on footer
+- Added stylistic background animation so background gradient now transitions left and right smoothly
+- Added hover effect drop shadow to search bar
+- Added hover effect drop shadow and x-translate animation to search results info boxes (details & flag)
+- Fixed error and display elements from pushing div structure by toggling display hidden/block relatively

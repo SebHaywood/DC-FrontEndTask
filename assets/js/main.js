@@ -84,16 +84,25 @@ async function toggleError(status){
   const outputError = document.getElementById("output-error");
 
   if (status){
+    outputError.style.display = "block";
+    outputMain.style.display = "hidden";
     outputMain.style.opacity = "0";
     outputError.style.opacity = "1";
     outputMain.style.height = "0";
     outputError.style.height = "fit-content";
   } else {
+    outputError.style.display = "hidden";
+    outputMain.style.display = "block";
     outputMain.style.opacity = "1";
     outputError.style.opacity = "0";
     outputMain.style.height = "fit-content";
     outputError.style.height = "0";
   }
+}
+
+// CLEAR SEARCH BAR FUNCTION
+async function clearSearch(){
+  document.getElementById('search-api').value = '';
 }
 
 // EVENT LISTENERS - SEARCH BAR CLICK - SEARCH BUTTON CLICK - ENTER KEY PRESSED
@@ -104,3 +113,6 @@ document.getElementById('search-api').addEventListener('keypress', function (e) 
     fetchCountry();
   }
 });
+
+// CLEAR SEARCH BAR
+document.getElementById('clear-search').addEventListener('click', clearSearch);
